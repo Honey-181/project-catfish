@@ -7,21 +7,19 @@ G = '\033[32m' # green
 C = '\033[36m' # cyan
 W = '\033[0m'  # white
 
-from shutil import which
-
-print(G + '[+]' + C + 'Starting Project-catfish')
-print(G + '[+]' + C + 'Project catfish')
-
 row = []
 info = ''
 result = ''
 version = '1.0'
 
-print(G + '[>]' + C + 'version :' + W + version + '\n')
+from shutil import which
+
+print(G + '[+]' + C + 'Starting Project-catfish')
+print(G + '[+]' + C + 'Project catfish')
 
 def ver_check():
-    print(G + '[+]' + C + ' Checking for Updates.....', end='')
-    ver_url = 'https://raw.githubusercontent.com/Optane002/catfish/main/version.txt'
+    print(G + '[+]' + C + 'Checking for Updates...', end='')
+    ver_url = 'https://raw.githubusercontent.com/Optane002/project-catfish/main/version.txt'
     try:
         ver_rqst = request.get(ver_url)
         ver_sc = ver_rqst.status_code
@@ -32,7 +30,7 @@ def ver_check():
             if version == github_ver:
                 print(C + '[' + G + ' Up-To-Date ' + C +']' + '\n')
             else:
-                print(C + '[' + G + ' Available : {} '.format(github_ver) + C +>
+                print(C + '[' + G + ' Available : {} '.format(github_ver) + C + ']' + '\n')
         else:
             print(C + '[' + R + ' Status : {} '.format(ver_sc) + C + ']' + '\n')
     except Exception as e:
