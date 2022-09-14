@@ -21,7 +21,7 @@ print(G + '[>]' + C + 'version :' + W + version + '\n')
 
 def ver_check():
     print(G + '[+]' + C + ' Checking for Updates.....', end='')
-    ver_url = 'https://raw.githubusercontent.com/Optane002/Project-Megatron/mai>
+    ver_url = 'https://raw.githubusercontent.com/Optane002/catfish/main/version.txt'
     try:
         ver_rqst = request.get(ver_url)
         ver_sc = ver_rqst.status_code
